@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => sliderCubit),
-        BlocProvider(create: (context) => sliderCubit),
+        BlocProvider(create: (context) => consmeticClinicsCubit),
       ],
       child: const Stack(
         children: [

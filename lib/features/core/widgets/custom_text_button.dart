@@ -19,6 +19,7 @@ class CustomTextButton extends StatelessWidget {
       child: Text(
         title,
         style: Theme.of(context).textTheme.titleMedium!.copyWith(
+              fontSize: 12,
               fontWeight: FontWeight.bold,
               color: isUnderLine
                   ? Theme.of(context).colorScheme.secondary
