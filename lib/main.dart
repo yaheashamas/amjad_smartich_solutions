@@ -1,14 +1,26 @@
 import 'package:amjad_smartich_solutions/core/di/di.dart';
+import 'package:amjad_smartich_solutions/core/network/api.dart';
 import 'package:amjad_smartich_solutions/core/router/fade_page_route_builder.dart';
 import 'package:amjad_smartich_solutions/core/router/route.dart';
 import 'package:amjad_smartich_solutions/core/theme/app_theme.dart';
 import 'package:amjad_smartich_solutions/features/login/presentation/pages/login_screen.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  setup();
+  //api
+  await Api.initializeInterceptors();
+  //Hydrated bloc
+  HydratedBloc.storage = await HydratedStorage.build(
+    storageDirectory: kIsWeb
+        ? HydratedStorage.webStorageDirectory
+        : await getTemporaryDirectory(),
+  );
+  await setup();
   runApp(const MyApp());
 }
 

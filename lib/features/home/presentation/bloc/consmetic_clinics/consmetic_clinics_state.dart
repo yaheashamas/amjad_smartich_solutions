@@ -1,7 +1,7 @@
 import 'package:amjad_smartich_solutions/features/home/domain/entities/cosmetic_clinics_entity.dart';
 import 'package:equatable/equatable.dart';
 
-enum StateClass { loading, loaded, error }
+enum StateClass { loading, loaded, error, init, lodinSuccessful }
 
 class ConsmeticClinicsState extends Equatable {
   final CosmeticClinicsEntity? cosmeticClinicsEntity;
@@ -17,7 +17,7 @@ class ConsmeticClinicsState extends Equatable {
   factory ConsmeticClinicsState.init() {
     return const ConsmeticClinicsState(
       cosmeticClinicsEntity: null,
-      stateClass: StateClass.loading,
+      stateClass: StateClass.init,
       message: "",
     );
   }

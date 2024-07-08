@@ -26,7 +26,6 @@ class ConsmeticClinicsCubit extends Cubit<ConsmeticClinicsState> {
             cosmeticClinicsEntity: r,
           ),
         );
-        print(r);
       },
     );
   }

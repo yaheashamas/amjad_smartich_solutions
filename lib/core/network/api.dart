@@ -1,7 +1,8 @@
+import 'package:amjad_smartich_solutions/features/login/presentation/bloc/token_cubit/token_cubit.dart';
 import 'package:dio/dio.dart';
 
 class Api {
-  static String baseUrl = 'http://glowme-up.com/';
+  static String baseUrl = 'http://glowme-up.com';
 
   static var options = BaseOptions(
     baseUrl: baseUrl,
@@ -16,8 +17,7 @@ class Api {
           var headers = {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            // 'Authorization':
-            //     "Bearer 139|KRW2LfHQW48y3FBUwzhNJoh0yRiTq8Cgsh0VYrvY7067e3c8",
+            'Authorization': "Bearer ${TokenCubit().state}",
             // "Accept-Language": "",
           };
           request.headers.addAll(headers);

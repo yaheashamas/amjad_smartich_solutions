@@ -12,6 +12,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool readOnly;
   final bool obscureText;
   final String? Function(String?)? validator;
+  final Widget? prefix;
 
   const CustomTextFormField({
     super.key,
@@ -24,6 +25,7 @@ class CustomTextFormField extends StatelessWidget {
     this.readOnly = false,
     this.obscureText = false,
     this.validator,
+    this.prefix,
   });
 
   @override
@@ -58,6 +60,7 @@ class CustomTextFormField extends StatelessWidget {
                   minWidth: 30,
                 ),
                 errorText: errorText,
+                prefix: prefix,
                 errorMaxLines: 2,
                 counterText: "",
               ),
