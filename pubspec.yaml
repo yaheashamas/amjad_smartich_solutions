@@ -1,0 +1,47 @@
+name: amjad_smartich_solutions
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  cupertino_icons: ^1.0.6
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
+  get_it: ^7.7.0
+  equatable: ^2.0.5
+  flutter_screenutil: ^5.9.3
+  flutter_staggered_animations: ^1.1.1
+  flutter_custom_clippers: ^2.1.0
+  dio: ^5.5.0+1
+  dartz: ^0.10.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+
+    - family: Meditative
+      fonts:
+        - asset: assets/fonts/Meditative.ttf
+
+  assets:
+    - assets/images/accessories/
+    - assets/images/home/slider_section/
+    - assets/images/home/cosmetic/
+    - assets/images/logo/

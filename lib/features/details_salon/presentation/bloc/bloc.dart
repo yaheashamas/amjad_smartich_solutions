@@ -1,0 +1,1 @@
+export 'details_salon_bloc.dart';
